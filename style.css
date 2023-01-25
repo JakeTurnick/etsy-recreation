@@ -1,0 +1,47 @@
+html {
+    box-sizing: border-box;
+}
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.wrapper > * {
+    margin: 0 0;
+}
+
+.thumbnail {
+    width: 100%;
+}
+
+.title {
+    font-size: 1.5rem;
+
+}
+
+.price {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.more {
+    display: flex;
+}
+
+.more > a {
+    text-decoration: none;
+    color: black;
+}
+
+i {
+    padding: 5px;
+}
+
+i:hover {
+    transform: translateX(5px);
+}
