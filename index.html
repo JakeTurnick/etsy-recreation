@@ -49,17 +49,17 @@
                 </div>
             </article>
         </div>
-        <section id="product" class="row"></section>
+        <section id="product" class="row pt-3">should go here</section>
     </div>
 
     <script id="product-template" type="text/x-handlebars-template">
         {{#each results}}
             <article class="col">
                 <div class="wrapper">
-                    <img src="./media/lifesized-gundam.png" class="thumbnail"/>
-                    <p class="title">hey</p>
-                    <p class="price">{{price}}</p>
-                    <p class="author">{{author}}</p>
+                    <img src="{{this.Images.[0].url_fullxfull}}" class="thumbnail"/>
+                    <p class="title">{{this.title}}</p>
+                    <p class="price">{{this.price}}</p>
+                    <p class="author">{{this.author}}</p>
                     <div class="more">
                         <a class="more-link" href="">more like this</a>
                         <i class="fa-solid fa-arrow-right"></i>
@@ -68,6 +68,18 @@
             </article>
         {{/each}}
     </script>
+<!-- 
+    this will be in the template later
+    <div class="wrapper">
+        <img src="" class="thumbnail"/>
+        <p class="title">{{@key}}: {{title}}</p>
+        <p class="price">{{price}}</p>
+        <p class="author">{{author}}</p>
+        <div class="more">
+            <a class="more-link" href="">more like this</a>
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+    </div> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./main.js" type="module"></script>

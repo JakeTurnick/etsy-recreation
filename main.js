@@ -9,15 +9,13 @@
 import { rawData } from "./data.js";
 
 (function () {
-  "use strict";
+	"use strict";
 
-  const source = document.getElementById("product-template").innerHTML;
-  const template = Handlebars.compile(source);
+	const source = document.getElementById("product-template").innerHTML;
+	const template = Handlebars.compile(source);
 
-  const context = {
-    rawData,
-  };
-  const html = template(context);
+	const data = rawData;
+	const html = template(data);
 
-  document.getElementById("product").insertAdjacentHTML("afterbegin", html);
+	document.getElementById("product").insertAdjacentHTML("afterbegin", html);
 })();
